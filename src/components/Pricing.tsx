@@ -52,11 +52,11 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 bg-background/80 relative">
+    <section id="pricing" className="py-24 bg-muted/50 relative">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-azure-500/5 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-opal-500/5 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-azure-400/10 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-opal-400/10 rounded-full blur-3xl opacity-30"></div>
       </div>
 
       <div className="container relative mx-auto px-4">
@@ -75,8 +75,8 @@ const Pricing = () => {
               key={index}
               className={`relative rounded-xl p-6 md:p-8 transition-all duration-300 flex flex-col
                 ${plan.popular ? 
-                  "border-2 border-gradient-r from-azure-500/30 to-opal-500/30 bg-gradient-to-br from-azure-500/10 to-opal-500/10 shadow-xl shadow-azure-500/5" : 
-                  "border border-azure-500/10 bg-azure-500/5 hover:shadow-lg"
+                  "border-2 border-azure-500/50 bg-white dark:bg-gray-900 shadow-xl shadow-azure-500/10" : 
+                  "border border-border bg-card hover:shadow-lg"
                 }`}
             >
               {plan.popular && (
@@ -97,7 +97,7 @@ const Pricing = () => {
               <ul className="mb-8 space-y-3 flex-grow">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
-                    <Check className="h-5 w-5 text-azure-400 mr-2 shrink-0" />
+                    <Check className="h-5 w-5 text-azure-500 mr-2 shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -105,8 +105,8 @@ const Pricing = () => {
 
               <Button 
                 className={`w-full ${plan.popular ? 
-                  "bg-gradient-to-r from-azure-500 to-opal-500 hover:opacity-90 text-white" : 
-                  "bg-azure-500/10 hover:bg-azure-500/20 text-foreground border border-azure-500/20"}`}
+                  "bg-gradient-to-r from-azure-500 to-opal-500 hover:opacity-90" : 
+                  "bg-azure-600 hover:bg-azure-700"}`}
               >
                 {plan.buttonText}
               </Button>
