@@ -9,7 +9,7 @@ const testimonials = [
     role: "Marketing Director",
     company: "TechCorp",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&auto=format&fit=crop&crop=faces&q=80",
-    content: "This platform completely transformed our online presence. The azure and opal themes give our brand a modern and trustworthy look. Highly recommend!",
+    content: "This platform completely transformed our online presence. The professional style gives our brand a modern and trustworthy look. Highly recommend!",
     stars: 5
   },
   {
@@ -45,15 +45,15 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card border border-border transition-all duration-300 hover:shadow-lg overflow-hidden group">
+            <Card key={index} className="bg-white/5 border border-white/10 transition-all duration-300 hover:shadow-lg overflow-hidden group">
               <CardContent className="p-6 relative">
-                <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-azure-500 to-opal-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                <div className="absolute top-0 right-0 left-0 h-1 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star 
                       key={i}
-                      className={`w-4 h-4 ${i < testimonial.stars ? "text-amber-400 fill-amber-400" : "text-gray-300"}`}
+                      className={`w-4 h-4 ${i < testimonial.stars ? "text-white fill-white" : "text-gray-600"}`}
                     />
                   ))}
                 </div>
@@ -61,7 +61,7 @@ const Testimonials = () => {
                 <p className="mb-6 text-foreground/80 italic">&ldquo;{testimonial.content}&rdquo;</p>
                 
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-azure-100 dark:border-azure-800">
+                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/20">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
