@@ -8,8 +8,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const ContactInfo = ({ icon: Icon, title, content }: { icon: React.FC<any>, title: string, content: string }) => (
   <div className="flex items-start">
-    <div className="mr-4 p-3 rounded-lg bg-white/5">
-      <Icon className="h-5 w-5 text-white" />
+    <div className="mr-4 p-3 rounded-lg bg-azure-500/10">
+      <Icon className="h-5 w-5 text-azure-400" />
     </div>
     <div>
       <h3 className="font-semibold">{title}</h3>
@@ -23,7 +23,7 @@ const Contact = () => {
     <section id="contact" className="py-24 relative">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-opal-500/5 rounded-full blur-3xl opacity-30"></div>
       </div>
 
       <div className="container relative mx-auto px-4">
@@ -62,17 +62,17 @@ const Contact = () => {
                   <a 
                     key={social}
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-opacity"
+                    className="w-10 h-10 rounded-full bg-azure-500/10 flex items-center justify-center hover:bg-azure-500/20 transition-opacity"
                   >
                     <span className="sr-only">{social}</span>
-                    <div className="w-5 h-5 bg-white/60 rounded-full"></div>
+                    <div className="w-5 h-5 bg-azure-500/60 rounded-full"></div>
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          <Card className="lg:col-span-3 border border-white/10 bg-white/5">
+          <Card className="lg:col-span-3 border border-azure-500/10 bg-azure-500/5">
             <CardContent className="p-6">
               <form className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -83,7 +83,7 @@ const Contact = () => {
                     <Input
                       id="name"
                       placeholder="Your name"
-                      className="border-white/10 bg-white/5"
+                      className="border-azure-500/10 bg-azure-500/5"
                     />
                   </div>
                   <div className="space-y-2">
@@ -94,7 +94,7 @@ const Contact = () => {
                       id="email"
                       type="email"
                       placeholder="Your email"
-                      className="border-white/10 bg-white/5"
+                      className="border-azure-500/10 bg-azure-500/5"
                     />
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                   <Input
                     id="subject"
                     placeholder="Message subject"
-                    className="border-white/10 bg-white/5"
+                    className="border-azure-500/10 bg-azure-500/5"
                   />
                 </div>
 
@@ -118,11 +118,11 @@ const Contact = () => {
                     id="message"
                     placeholder="Your message"
                     rows={5}
-                    className="border-white/10 bg-white/5"
+                    className="border-azure-500/10 bg-azure-500/5"
                   />
                 </div>
 
-                <Button className="w-full bg-white hover:bg-white/90 text-black">
+                <Button className="w-full bg-gradient-to-r from-azure-500 to-opal-500 text-white hover:opacity-90">
                   Send Message
                 </Button>
               </form>

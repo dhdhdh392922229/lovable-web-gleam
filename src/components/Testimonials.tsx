@@ -45,15 +45,15 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white/5 border border-white/10 transition-all duration-300 hover:shadow-lg overflow-hidden group">
+            <Card key={index} className="bg-azure-500/5 border border-azure-500/10 transition-all duration-300 hover:shadow-lg overflow-hidden group">
               <CardContent className="p-6 relative">
-                <div className="absolute top-0 right-0 left-0 h-1 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-azure-500 to-opal-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star 
                       key={i}
-                      className={`w-4 h-4 ${i < testimonial.stars ? "text-white fill-white" : "text-gray-600"}`}
+                      className={`w-4 h-4 ${i < testimonial.stars ? "text-azure-400 fill-azure-400" : "text-gray-600"}`}
                     />
                   ))}
                 </div>
@@ -61,7 +61,7 @@ const Testimonials = () => {
                 <p className="mb-6 text-foreground/80 italic">&ldquo;{testimonial.content}&rdquo;</p>
                 
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-white/20">
+                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4 border-2 border-azure-500/20">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}

@@ -8,16 +8,16 @@ const Hero = () => {
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl opacity-20 animate-glow"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl opacity-20 animate-glow"></div>
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-azure-500/10 rounded-full blur-3xl opacity-20 animate-glow"></div>
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-opal-500/10 rounded-full blur-3xl opacity-20 animate-glow"></div>
         <div className="absolute inset-0 bg-grid opacity-10"></div>
       </div>
 
       <div className="container relative mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-6 inline-flex items-center px-4 py-1.5 rounded-full border border-white/20 bg-white/5">
-            <span className="animate-pulse w-2 h-2 rounded-full bg-white mr-2"></span>
-            <span className="text-sm font-medium text-white/80">Launching soon</span>
+          <div className="mb-6 inline-flex items-center px-4 py-1.5 rounded-full border border-azure-500/20 bg-azure-500/5">
+            <span className="animate-pulse w-2 h-2 rounded-full bg-azure-500 mr-2"></span>
+            <span className="text-sm font-medium text-azure-400">Launching soon</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
@@ -31,10 +31,10 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white hover:bg-white/90 text-black font-medium px-8">
+            <Button size="lg" className="bg-gradient-to-r from-azure-500 to-opal-500 text-white font-medium px-8 hover:opacity-90">
               Get Started
             </Button>
-            <Button variant="outline" size="lg" className="group border-white/20 bg-white/5 hover:bg-white/10">
+            <Button variant="outline" size="lg" className="group border-azure-500/20 bg-azure-500/5 hover:bg-azure-500/10 text-foreground">
               Learn More
               <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -44,10 +44,10 @@ const Hero = () => {
         {/* Hero Image */}
         <div className="mt-16 relative max-w-5xl mx-auto">
           <div className="glow-effect">
-            <div className="relative rounded-lg overflow-hidden shadow-2xl border border-white/10 bg-black/50 backdrop-blur-sm">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl border border-azure-500/10 bg-black/50 backdrop-blur-sm">
               <div className="aspect-[16/9] w-full bg-black overflow-hidden flex items-center justify-center">
                 <div className="relative animate-float">
-                  <Camera size={240} className="text-white" />
+                  <Camera size={240} className="text-gradient" />
                 </div>
               </div>
             </div>
