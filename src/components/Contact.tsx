@@ -8,12 +8,12 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const ContactInfo = ({ icon: Icon, title, content }: { icon: React.FC<any>, title: string, content: string }) => (
   <div className="flex items-start">
-    <div className="mr-4 p-3 rounded-lg bg-gradient-to-br from-azure-100 to-opal-100 dark:from-azure-900/30 dark:to-opal-900/30">
-      <Icon className="h-5 w-5 text-gradient" />
+    <div className="mr-4 p-3 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30">
+      <Icon className="h-5 w-5 text-blue-600" />
     </div>
     <div>
-      <h3 className="font-semibold">{title}</h3>
-      <p className="text-foreground/70">{content}</p>
+      <h3 className="font-semibold text-blue-700">{title}</h3>
+      <p className="text-blue-600/70">{content}</p>
     </div>
   </div>
 );
@@ -23,7 +23,7 @@ const Contact = () => {
     <section id="contact" className="py-24 relative">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-azure-500/10 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl opacity-30"></div>
       </div>
 
       <div className="container relative mx-auto px-4">
@@ -31,8 +31,8 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="text-foreground/80">
-            Have questions or need assistance? Our team is here to help. Reach out to us and we'll get back to you as soon as possible.
+          <p className="text-blue-600/80">
+            Have questions about ingredients or need assistance with our app? Our team is here to help.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ const Contact = () => {
             <ContactInfo 
               icon={Mail} 
               title="Email Us" 
-              content="hello@azureopal.com" 
+              content="hello@sunerus.com" 
             />
             <ContactInfo 
               icon={Phone} 
@@ -51,21 +51,21 @@ const Contact = () => {
             <ContactInfo 
               icon={MapPin} 
               title="Location" 
-              content="100 Technology Drive, Suite 300, San Francisco, CA 94103" 
+              content="100 Health Avenue, Suite 300, San Francisco, CA 94103" 
             />
 
             <div className="pt-6">
-              <h3 className="font-semibold mb-4">Connect With Us</h3>
+              <h3 className="font-semibold mb-4 text-blue-700">Connect With Us</h3>
               <div className="flex space-x-4">
                 {/* Social media icons as circles */}
                 {["facebook", "twitter", "instagram", "linkedin"].map((social) => (
                   <a 
                     key={social}
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-gradient-to-r from-azure-100 to-opal-100 dark:from-azure-900/30 dark:to-opal-900/30 flex items-center justify-center hover:opacity-80 transition-opacity"
+                    className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 flex items-center justify-center hover:opacity-80 transition-opacity"
                   >
                     <span className="sr-only">{social}</span>
-                    <div className="w-5 h-5 bg-gradient-to-r from-azure-500 to-opal-500 rounded-full"></div>
+                    <div className="w-5 h-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
                   </a>
                 ))}
               </div>
@@ -77,52 +77,52 @@ const Contact = () => {
               <form className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
+                    <label htmlFor="name" className="text-sm font-medium text-blue-700">
                       Name
                     </label>
                     <Input
                       id="name"
                       placeholder="Your name"
-                      className="border-border"
+                      className="border-blue-200 focus:border-blue-500"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
+                    <label htmlFor="email" className="text-sm font-medium text-blue-700">
                       Email
                     </label>
                     <Input
                       id="email"
                       type="email"
                       placeholder="Your email"
-                      className="border-border"
+                      className="border-blue-200 focus:border-blue-500"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
+                  <label htmlFor="subject" className="text-sm font-medium text-blue-700">
                     Subject
                   </label>
                   <Input
                     id="subject"
                     placeholder="Message subject"
-                    className="border-border"
+                    className="border-blue-200 focus:border-blue-500"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
+                  <label htmlFor="message" className="text-sm font-medium text-blue-700">
                     Message
                   </label>
                   <Textarea
                     id="message"
                     placeholder="Your message"
                     rows={5}
-                    className="border-border"
+                    className="border-blue-200 focus:border-blue-500"
                   />
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-azure-500 to-opal-500 hover:opacity-90">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
                   Send Message
                 </Button>
               </form>

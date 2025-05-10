@@ -4,33 +4,33 @@ import { Sparkles, Zap, Shield, ArrowRightLeft, BarChart4, Palette } from "lucid
 
 const features = [
   {
-    title: "Stunning UI",
-    description: "Beautiful interface that delivers an exceptional user experience across all devices.",
+    title: "Scan Products",
+    description: "Simply scan a barcode or search for products to instantly check their ingredients.",
     icon: Palette,
   },
   {
-    title: "Lightning Fast",
-    description: "Optimized performance ensures your content loads quickly and efficiently.",
+    title: "Flag Harmful Ingredients",
+    description: "Automatically flags ingredients that are controversial or banned in certain countries.",
     icon: Zap,
   },
   {
-    title: "Advanced Security",
-    description: "Enterprise-level security to protect your data and privacy at all times.",
+    title: "Allergy Protection",
+    description: "Identify allergy-triggering ingredients and harmful substances with ease.",
     icon: Shield,
   },
   {
-    title: "Seamless Sync",
-    description: "Sync across all your devices with real-time updates and zero conflicts.",
+    title: "Safer Alternatives",
+    description: "Get recommendations for products with safer ingredient profiles and fewer harmful additives.",
     icon: ArrowRightLeft,
   },
   {
-    title: "Smart Analytics",
-    description: "Gain valuable insights with comprehensive analytics and reporting tools.",
+    title: "Detailed Insights",
+    description: "Learn what each ingredient does and why some are considered problematic.",
     icon: BarChart4,
   },
   {
-    title: "Magical Experience",
-    description: "A delightful experience that makes using the platform feel like magic.",
+    title: "Works Everywhere",
+    description: "Check ingredients in food, makeup, skincare products, and more with our comprehensive database.",
     icon: Sparkles,
   },
 ];
@@ -43,8 +43,8 @@ const Features = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Powerful <span className="text-gradient">Features</span>
           </h2>
-          <p className="text-foreground/80">
-            Our platform combines cutting-edge technology with intuitive design to bring you the best experience possible.
+          <p className="text-blue-600/80">
+            Our platform helps you make informed choices about the products you buy and use every day.
           </p>
         </div>
 
@@ -52,15 +52,15 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="relative group p-8 rounded-xl border border-border bg-card hover:border-accent/50 hover:shadow-lg transition-all duration-300"
+              className="relative group p-8 rounded-xl border border-border bg-card hover:border-blue-300/50 hover:shadow-lg transition-all duration-300"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-azure-500 to-opal-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity blur-sm"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity blur-sm"></div>
               <div className="relative">
-                <div className="mb-4 p-3 rounded-lg bg-gradient-to-br from-azure-100 to-opal-100 dark:from-azure-900/30 dark:to-opal-900/30 inline-flex">
-                  <feature.icon className="h-6 w-6 text-gradient" />
+                <div className="mb-4 p-3 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 inline-flex">
+                  <feature.icon className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-foreground/70">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-blue-700">{feature.title}</h3>
+                <p className="text-blue-600/70">{feature.description}</p>
               </div>
             </div>
           ))}
