@@ -22,19 +22,17 @@ const Hero = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
             <span className="text-gradient block mb-1">Sunerus</span>
-            <span>Label Check</span>
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-3xl mx-auto">
-            People unknowingly buy products with harmful or allergy-triggering ingredients (like titanium dioxide, Red 40, or microplastics), especially in the U.S., where banned substances in other countries are still legal.
-            Scan or search a product, and LabelCheck instantly flags controversial or banned ingredients, explains what they do, and offers safer alternatives. Works on food, makeup, skincare, etc.
+            Scan products and instantly identify harmful or allergy-triggering ingredients, with safer alternatives for food, makeup, skincare, and more.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-azure-400 to-opal-500 hover:opacity-90 text-white font-medium px-8">
+            <Button size="lg" className="bg-azure-300 hover:bg-azure-400 text-white font-medium px-8">
               Get Started
             </Button>
-            <Button variant="outline" size="lg" className="group text-azure-600 border-azure-300">
+            <Button variant="outline" size="lg" className="group text-azure-400 border-azure-300">
               Learn More
               <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -44,15 +42,46 @@ const Hero = () => {
         {/* Hero Image */}
         <div className="mt-16 relative max-w-5xl mx-auto">
           <div className="glow-effect">
-            <div className="relative rounded-lg overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-white/70 to-white/50 dark:from-gray-800/70 dark:to-gray-900/50 backdrop-blur-sm">
-              <div className="aspect-[16/9] w-full bg-azure-50 dark:bg-gray-900 overflow-hidden">
-                <div className="h-full w-full bg-gradient-to-br from-azure-100 to-opal-100 dark:from-azure-900/30 dark:to-opal-900/30 flex items-center justify-center">
-                  <div className="relative animate-float">
-                    <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-azure-400 to-opal-500 opacity-80 blur-2xl absolute inset-0"></div>
-                    <div className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center">
-                      <div className="w-52 h-52 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-azure-400 to-opal-500 flex items-center justify-center text-white text-6xl font-bold">
-                        SC
+            <div className="relative rounded-lg overflow-hidden shadow-2xl bg-white dark:bg-gray-800">
+              <div className="aspect-[16/9] w-full overflow-hidden">
+                <div className="h-full w-full flex items-center justify-center p-8">
+                  <div className="w-full max-w-2xl bg-white rounded-xl shadow-lg p-6">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4">Ingredient Analysis</h3>
+                    <div className="space-y-4">
+                      <div className="p-3 border-l-4 border-red-500 bg-red-50 rounded">
+                        <div className="flex justify-between">
+                          <div>
+                            <p className="font-bold text-gray-800">Red 40</p>
+                            <p className="text-red-600 text-sm font-medium">High Risk</p>
+                          </div>
+                          <span className="text-sm text-gray-600">Synthetic color linked to allergies</span>
+                        </div>
                       </div>
+                      
+                      <div className="p-3 border-l-4 border-yellow-500 bg-yellow-50 rounded">
+                        <div className="flex justify-between">
+                          <div>
+                            <p className="font-bold text-gray-800">Titanium Dioxide</p>
+                            <p className="text-yellow-600 text-sm font-medium">Medium</p>
+                          </div>
+                          <span className="text-sm text-gray-600">Possible carcinogen</span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-3 border-l-4 border-orange-400 bg-orange-50 rounded">
+                        <div className="flex justify-between">
+                          <div>
+                            <p className="font-bold text-gray-800">BHT</p>
+                            <p className="text-orange-600 text-sm font-medium">Caution</p>
+                          </div>
+                          <span className="text-sm text-gray-600">Preservative with health concerns</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 flex justify-between">
+                      <Button className="bg-azure-300 hover:bg-azure-400 text-white">View Safe Alternatives</Button>
+                      <Button variant="outline" className="text-azure-400 border-azure-300">Full Health Report</Button>
                     </div>
                   </div>
                 </div>

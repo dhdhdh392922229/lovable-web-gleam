@@ -39,13 +39,13 @@ const Testimonials = () => {
             What Our <span className="text-gradient">Users Say</span>
           </h2>
           <p className="text-azure-600/80">
-            Hear from people who use Sunerus Label Check to make healthier product choices.
+            Hear from people who use Sunerus to make healthier product choices.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card border border-border transition-all duration-300 hover:shadow-lg overflow-hidden group">
+            <Card key={index} className="bg-white border border-border transition-all duration-300 hover:shadow-lg overflow-hidden group">
               <CardContent className="p-6 relative">
                 <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-azure-400 to-opal-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 
@@ -53,7 +53,7 @@ const Testimonials = () => {
                   {[...Array(5)].map((_, i) => (
                     <Star 
                       key={i}
-                      className={`w-4 h-4 ${i < testimonial.stars ? "text-amber-400 fill-amber-400" : "text-gray-300"}`}
+                      className={`w-4 h-4 ${i < testimonial.stars ? "text-azure-300 fill-azure-300" : "text-gray-300"}`}
                     />
                   ))}
                 </div>

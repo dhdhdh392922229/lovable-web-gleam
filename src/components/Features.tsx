@@ -52,14 +52,14 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="relative group p-8 rounded-xl border border-border bg-card hover:border-azure-300/50 hover:shadow-lg transition-all duration-300"
+              className="relative group p-8 rounded-xl border border-border bg-white hover:border-azure-300/50 hover:shadow-lg transition-all duration-300"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-azure-400 to-opal-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity blur-sm"></div>
               <div className="relative">
                 <div className="mb-4 p-3 rounded-lg bg-gradient-to-br from-azure-100 to-opal-100 dark:from-azure-900/30 dark:to-opal-800/30 inline-flex">
-                  <feature.icon className="h-6 w-6 text-azure-600" />
+                  <feature.icon className="h-6 w-6 text-azure-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-azure-700">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-azure-600">{feature.title}</h3>
                 <p className="text-azure-600/70">{feature.description}</p>
               </div>
             </div>

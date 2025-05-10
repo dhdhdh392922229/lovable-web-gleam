@@ -1,15 +1,16 @@
 
 import React from "react";
+import { Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/50 pt-16 pb-8 relative">
+    <footer className="bg-white pt-16 pb-8 relative">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-5">
-              <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-azure-300">
+              <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center overflow-hidden">
                 <img 
                   src="/lovable-uploads/239c243a-8627-416b-ac27-45607806694d.png" 
                   alt="Sunerus Logo" 
@@ -22,17 +23,21 @@ const Footer = () => {
               Helping consumers make informed choices about the products they use by providing detailed information about ingredients and safer alternatives.
             </p>
             <div className="flex space-x-3">
-              {/* Social media circles */}
-              {["facebook", "twitter", "instagram", "linkedin"].map((social) => (
-                <a 
-                  key={social}
-                  href="#" 
-                  className="w-8 h-8 rounded-full bg-azure-100 flex items-center justify-center hover:bg-azure-200 transition-colors"
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-azure-500 to-opal-500 rounded-full"></div>
-                </a>
-              ))}
+              {/* Social media icons */}
+              <a 
+                href="#" 
+                className="w-8 h-8 rounded-full bg-azure-100 flex items-center justify-center hover:bg-azure-200 transition-colors"
+              >
+                <Instagram className="w-4 h-4 text-azure-600" />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a 
+                href="#" 
+                className="w-8 h-8 rounded-full bg-azure-100 flex items-center justify-center hover:bg-azure-200 transition-colors"
+              >
+                <Linkedin className="w-4 h-4 text-azure-600" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
             </div>
           </div>
 
@@ -42,8 +47,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="#" className="text-azure-600/70 hover:text-azure-600 transition-colors">Home</a></li>
               <li><a href="#features" className="text-azure-600/70 hover:text-azure-600 transition-colors">Features</a></li>
-              <li><a href="#pricing" className="text-azure-600/70 hover:text-azure-600 transition-colors">Pricing</a></li>
-              <li><a href="#testimonials" className="text-azure-600/70 hover:text-azure-600 transition-colors">Testimonials</a></li>
               <li><a href="#contact" className="text-azure-600/70 hover:text-azure-600 transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -72,7 +75,7 @@ const Footer = () => {
               />
               <button 
                 type="submit" 
-                className="bg-gradient-to-r from-azure-500 to-opal-500 text-white px-4 py-2 rounded-r-lg hover:opacity-90 transition-colors"
+                className="bg-azure-300 hover:bg-azure-400 text-white px-4 py-2 rounded-r-lg transition-colors"
               >
                 Subscribe
               </button>
