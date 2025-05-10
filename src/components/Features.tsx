@@ -37,13 +37,13 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 relative bg-background">
+    <section id="features" className="py-24 relative bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Powerful <span className="text-gradient">Features</span>
+            Powerful <span className="text-azure-400">Features</span>
           </h2>
-          <p className="text-azure-600/80">
+          <p className="text-gray-600">
             Our platform helps you make informed choices about the products you buy and use every day.
           </p>
         </div>
@@ -52,15 +52,15 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="relative group p-8 rounded-xl border border-border bg-white hover:border-azure-300/50 hover:shadow-lg transition-all duration-300"
+              className="relative group p-8 rounded-xl border border-gray-100 bg-white hover:border-azure-100 hover:shadow-lg transition-all duration-300"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-azure-400 to-opal-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity blur-sm"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-azure-200 to-opal-200 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity blur-sm"></div>
               <div className="relative">
-                <div className="mb-4 p-3 rounded-lg bg-gradient-to-br from-azure-100 to-opal-100 dark:from-azure-900/30 dark:to-opal-800/30 inline-flex">
+                <div className="mb-4 p-3 rounded-lg bg-gradient-to-br from-azure-50 to-opal-50 inline-flex">
                   <feature.icon className="h-6 w-6 text-azure-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-azure-600">{feature.title}</h3>
-                <p className="text-azure-600/70">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             </div>
           ))}

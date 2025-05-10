@@ -24,36 +24,34 @@ const NavBar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm" 
+          ? "bg-white/90 backdrop-blur-md shadow-sm" 
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center">
-          <div className="relative glow-effect">
-            <div className="h-10 w-10 rounded-lg flex items-center justify-center overflow-hidden">
-              <img 
-                src="/lovable-uploads/239c243a-8627-416b-ac27-45607806694d.png" 
-                alt="Sunerus Logo" 
-                className="w-8 h-8 object-contain"
-              />
-            </div>
+          <div className="h-10 w-10 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/239c243a-8627-416b-ac27-45607806694d.png" 
+              alt="Sunerus Logo" 
+              className="w-8 h-8 object-contain"
+            />
           </div>
-          <span className="ml-3 text-xl font-bold text-azure-600">Sunerus</span>
+          <span className="ml-3 text-xl font-bold text-gray-800">Sunerus</span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-azure-600 hover:text-azure-800 transition-colors">Features</a>
-          <a href="#contact" className="text-azure-600 hover:text-azure-800 transition-colors">Contact</a>
-          <Button className="bg-azure-300 hover:bg-azure-400 text-white transition-colors">
+          <a href="#features" className="text-gray-600 hover:text-azure-500 transition-colors">Features</a>
+          <a href="#contact" className="text-gray-600 hover:text-azure-500 transition-colors">Contact</a>
+          <Button className="bg-azure-400 hover:bg-azure-500 text-white transition-colors">
             Get Started
           </Button>
         </nav>
 
         {/* Mobile Navigation Trigger */}
         <button 
-          className="md:hidden p-2 text-azure-600" 
+          className="md:hidden p-2 text-gray-600" 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -63,23 +61,23 @@ const NavBar = () => {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-t">
+        <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a 
               href="#features" 
-              className="text-azure-600 hover:text-azure-800 py-2 transition-colors"
+              className="text-gray-600 hover:text-azure-500 py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Features
             </a>
             <a 
               href="#contact" 
-              className="text-azure-600 hover:text-azure-800 py-2 transition-colors"
+              className="text-gray-600 hover:text-azure-500 py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
-            <Button className="bg-azure-300 hover:bg-azure-400 w-full">
+            <Button className="bg-azure-400 hover:bg-azure-500 w-full text-white">
               Get Started
             </Button>
           </div>
