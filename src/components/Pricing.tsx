@@ -55,8 +55,8 @@ const Pricing = () => {
     <section id="pricing" className="py-24 bg-muted/50 relative">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-azure-400/10 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-opal-400/10 rounded-full blur-3xl opacity-30"></div>
       </div>
 
       <div className="container relative mx-auto px-4">
@@ -64,7 +64,7 @@ const Pricing = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Simple, Transparent <span className="text-gradient">Pricing</span>
           </h2>
-          <p className="text-blue-600/80">
+          <p className="text-azure-600/80">
             Choose the plan that fits your needs. All plans include our core ingredient checking features.
           </p>
         </div>
@@ -75,38 +75,38 @@ const Pricing = () => {
               key={index}
               className={`relative rounded-xl p-6 md:p-8 transition-all duration-300 flex flex-col
                 ${plan.popular ? 
-                  "border-2 border-blue-500/50 bg-white dark:bg-gray-900 shadow-xl shadow-blue-500/10" : 
+                  "border-2 border-azure-500/50 bg-white dark:bg-gray-900 shadow-xl shadow-azure-500/10" : 
                   "border border-border bg-card hover:shadow-lg"
                 }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-0 right-0 mx-auto w-max px-4 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
+                <div className="absolute -top-4 left-0 right-0 mx-auto w-max px-4 py-1 bg-gradient-to-r from-azure-500 to-opal-500 text-white text-sm font-medium rounded-full">
                   Most Popular
                 </div>
               )}
               
               <div className="mb-6">
-                <h3 className="text-xl font-bold text-blue-700">{plan.name}</h3>
+                <h3 className="text-xl font-bold text-azure-700">{plan.name}</h3>
                 <div className="mt-3 flex items-baseline">
-                  <span className="text-3xl md:text-4xl font-bold text-blue-800">{plan.price}</span>
-                  {plan.price !== "Free" && <span className="ml-1 text-blue-600/70">/month</span>}
+                  <span className="text-3xl md:text-4xl font-bold text-azure-800">{plan.price}</span>
+                  {plan.price !== "Free" && <span className="ml-1 text-azure-600/70">/month</span>}
                 </div>
-                <p className="mt-4 text-blue-600/70">{plan.description}</p>
+                <p className="mt-4 text-azure-600/70">{plan.description}</p>
               </div>
 
               <ul className="mb-8 space-y-3 flex-grow">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 shrink-0" />
-                    <span className="text-blue-700">{feature}</span>
+                    <Check className="h-5 w-5 text-azure-500 mr-2 shrink-0" />
+                    <span className="text-azure-700">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Button 
                 className={`w-full ${plan.popular ? 
-                  "bg-blue-600 hover:bg-blue-700" : 
-                  "bg-blue-500 hover:bg-blue-600"}`}
+                  "bg-gradient-to-r from-azure-500 to-opal-500 hover:opacity-90" : 
+                  "bg-azure-500 hover:bg-azure-600"}`}
               >
                 {plan.buttonText}
               </Button>

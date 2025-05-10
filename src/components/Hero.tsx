@@ -8,16 +8,16 @@ const Hero = () => {
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-400/20 rounded-full blur-3xl opacity-30 animate-glow"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl opacity-30 animate-glow"></div>
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-azure-400/20 rounded-full blur-3xl opacity-30 animate-glow"></div>
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-opal-500/20 rounded-full blur-3xl opacity-30 animate-glow"></div>
         <div className="absolute inset-0 bg-grid opacity-20"></div>
       </div>
 
       <div className="container relative mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-6 inline-flex items-center px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50/50 dark:border-blue-700 dark:bg-blue-900/30">
-            <span className="animate-pulse w-2 h-2 rounded-full bg-blue-500 mr-2"></span>
-            <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Launching soon</span>
+          <div className="mb-6 inline-flex items-center px-4 py-1.5 rounded-full border border-azure-200 bg-azure-50/50 dark:border-azure-700 dark:bg-azure-900/30">
+            <span className="animate-pulse w-2 h-2 rounded-full bg-azure-500 mr-2"></span>
+            <span className="text-sm font-medium text-azure-700 dark:text-azure-300">Launching soon</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
@@ -31,10 +31,10 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-blue-400 to-blue-600 hover:opacity-90 text-white font-medium px-8">
+            <Button size="lg" className="bg-gradient-to-r from-azure-400 to-opal-500 hover:opacity-90 text-white font-medium px-8">
               Get Started
             </Button>
-            <Button variant="outline" size="lg" className="group text-blue-600 border-blue-300">
+            <Button variant="outline" size="lg" className="group text-azure-600 border-azure-300">
               Learn More
               <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -45,12 +45,12 @@ const Hero = () => {
         <div className="mt-16 relative max-w-5xl mx-auto">
           <div className="glow-effect">
             <div className="relative rounded-lg overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-white/70 to-white/50 dark:from-gray-800/70 dark:to-gray-900/50 backdrop-blur-sm">
-              <div className="aspect-[16/9] w-full bg-blue-50 dark:bg-gray-900 overflow-hidden">
-                <div className="h-full w-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 flex items-center justify-center">
+              <div className="aspect-[16/9] w-full bg-azure-50 dark:bg-gray-900 overflow-hidden">
+                <div className="h-full w-full bg-gradient-to-br from-azure-100 to-opal-100 dark:from-azure-900/30 dark:to-opal-900/30 flex items-center justify-center">
                   <div className="relative animate-float">
-                    <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-400 to-blue-500 opacity-80 blur-2xl absolute inset-0"></div>
+                    <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-azure-400 to-opal-500 opacity-80 blur-2xl absolute inset-0"></div>
                     <div className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center">
-                      <div className="w-52 h-52 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-6xl font-bold">
+                      <div className="w-52 h-52 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-azure-400 to-opal-500 flex items-center justify-center text-white text-6xl font-bold">
                         SC
                       </div>
                     </div>

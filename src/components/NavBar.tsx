@@ -31,7 +31,7 @@ const NavBar = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center">
           <div className="relative glow-effect">
-            <div className="h-10 w-10 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-blue-300">
+            <div className="h-10 w-10 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-azure-300">
               <img 
                 src="/lovable-uploads/239c243a-8627-416b-ac27-45607806694d.png" 
                 alt="Sunerus Logo" 
@@ -39,23 +39,23 @@ const NavBar = () => {
               />
             </div>
           </div>
-          <span className="ml-3 text-xl font-bold text-blue-600">Sunerus</span>
+          <span className="ml-3 text-xl font-bold text-azure-600">Sunerus</span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-blue-600 hover:text-blue-800 transition-colors">Features</a>
-          <a href="#pricing" className="text-blue-600 hover:text-blue-800 transition-colors">Pricing</a>
-          <a href="#testimonials" className="text-blue-600 hover:text-blue-800 transition-colors">Testimonials</a>
-          <a href="#contact" className="text-blue-600 hover:text-blue-800 transition-colors">Contact</a>
-          <Button className="bg-blue-500 hover:bg-blue-600 transition-colors">
+          <a href="#features" className="text-azure-600 hover:text-azure-800 transition-colors">Features</a>
+          <a href="#pricing" className="text-azure-600 hover:text-azure-800 transition-colors">Pricing</a>
+          <a href="#testimonials" className="text-azure-600 hover:text-azure-800 transition-colors">Testimonials</a>
+          <a href="#contact" className="text-azure-600 hover:text-azure-800 transition-colors">Contact</a>
+          <Button className="bg-azure-500 hover:bg-azure-600 transition-colors">
             Get Started
           </Button>
         </nav>
 
         {/* Mobile Navigation Trigger */}
         <button 
-          className="md:hidden p-2 text-blue-600" 
+          className="md:hidden p-2 text-azure-600" 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -69,33 +69,33 @@ const NavBar = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a 
               href="#features" 
-              className="text-blue-600 hover:text-blue-800 py-2 transition-colors"
+              className="text-azure-600 hover:text-azure-800 py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Features
             </a>
             <a 
               href="#pricing" 
-              className="text-blue-600 hover:text-blue-800 py-2 transition-colors"
+              className="text-azure-600 hover:text-azure-800 py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Pricing
             </a>
             <a 
               href="#testimonials" 
-              className="text-blue-600 hover:text-blue-800 py-2 transition-colors"
+              className="text-azure-600 hover:text-azure-800 py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Testimonials
             </a>
             <a 
               href="#contact" 
-              className="text-blue-600 hover:text-blue-800 py-2 transition-colors"
+              className="text-azure-600 hover:text-azure-800 py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
-            <Button className="bg-blue-500 hover:bg-blue-600 w-full">
+            <Button className="bg-azure-500 hover:bg-azure-600 w-full">
               Get Started
             </Button>
           </div>

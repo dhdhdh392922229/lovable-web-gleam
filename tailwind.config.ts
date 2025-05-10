@@ -63,22 +63,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-                blue: {
-                    50: '#f0f9ff',
-                    100: '#e0f2fe',
-                    200: '#bae6fd',
-                    300: '#7dd3fc',
-                    400: '#38bdf8',
-                    500: '#0ea5e9',
-                    600: '#0284c7',
-                    700: '#0369a1',
-                    800: '#075985',
-                    900: '#0c4a6e',
-                },
                 azure: {
                     50: '#f0f9ff',
-                    100: '#e0f2fe',
-                    200: '#bae6fd',
+                    100: '#e0f7fe',
+                    200: '#bae8fd',
                     300: '#7dd3fc',
                     400: '#38bdf8',
                     500: '#0ea5e9',
@@ -89,15 +77,15 @@ export default {
                 },
                 opal: {
                     50: '#f0fdfa',
-                    100: '#e0f7fa',
-                    200: '#b2ebf2',
-                    300: '#80deea',
-                    400: '#4dd0e1',
-                    500: '#26c6da',
-                    600: '#00bcd4',
-                    700: '#0097a7',
-                    800: '#00838f',
-                    900: '#006064',
+                    100: '#ccfbf1',
+                    200: '#99f6e4',
+                    300: '#5eead4',
+                    400: '#2dd4bf',
+                    500: '#14b8a6',
+                    600: '#0d9488',
+                    700: '#0f766e',
+                    800: '#115e59',
+                    900: '#134e4a',
                 }
 			},
 			borderRadius: {
@@ -141,15 +129,15 @@ export default {
                 'pulse-glow': {
                     '0%': {
                         opacity: '0.4',
-                        boxShadow: '0 0 0 0 rgba(33, 150, 243, 0.7)'
+                        boxShadow: '0 0 0 0 rgba(33, 196, 243, 0.7)'
                     },
                     '70%': {
                         opacity: '1',
-                        boxShadow: '0 0 0 10px rgba(33, 150, 243, 0)'
+                        boxShadow: '0 0 0 10px rgba(33, 196, 243, 0)'
                     },
                     '100%': {
                         opacity: '0.4',
-                        boxShadow: '0 0 0 0 rgba(33, 150, 243, 0)'
+                        boxShadow: '0 0 0 0 rgba(33, 196, 243, 0)'
                     }
                 }
 			},
