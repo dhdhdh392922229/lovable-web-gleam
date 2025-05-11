@@ -58,15 +58,15 @@ const Hero = () => {
                 <span className="text-sm text-azure-400 font-medium">Scanning Complete</span>
               </div>
               
-              {/* Product Image */}
+              {/* Product Image - Changed to food-related image */}
               <div className="bg-black rounded-lg mb-6 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1000&auto=format&fit=crop"
-                  alt="Laptop product" 
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop"
+                  alt="Healthy food bowl" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-2 absolute top-2 left-2 bg-white/80 rounded-md flex items-center">
-                  <span className="font-medium text-sm">Lumera</span>
+                  <span className="font-medium text-sm">Food Analysis</span>
                 </div>
               </div>
 
