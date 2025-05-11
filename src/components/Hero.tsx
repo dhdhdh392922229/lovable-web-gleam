@@ -10,7 +10,6 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-azure-200/30 rounded-full blur-3xl opacity-30 animate-glow"></div>
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-opal-200/30 rounded-full blur-3xl opacity-30 animate-glow"></div>
-        <div className="absolute inset-0 bg-grid opacity-10"></div>
       </div>
 
       <div className="container relative mx-auto px-4">
@@ -46,7 +45,7 @@ const Hero = () => {
             <div className="p-6 md:p-8">
               <div className="flex justify-between items-center mb-6">
                 <div className="flex items-center">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-full">
+                  <div className="h-10 w-10 flex items-center justify-center">
                     <img 
                       src="/lovable-uploads/239c243a-8627-416b-ac27-45607806694d.png" 
                       alt="Sunerus Icon" 
@@ -60,7 +59,7 @@ const Hero = () => {
               
               <div className="space-y-4 mb-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="p-4 border border-red-100 bg-red-50 rounded-lg">
+                  <div className="p-4 border border-gray-800 bg-white rounded-lg">
                     <div>
                       <p className="font-bold text-gray-800">Red 40</p>
                       <p className="text-red-600 text-sm font-medium">High Risk</p>
@@ -68,7 +67,7 @@ const Hero = () => {
                     </div>
                   </div>
                   
-                  <div className="p-4 border border-yellow-100 bg-yellow-50 rounded-lg">
+                  <div className="p-4 border border-gray-800 bg-white rounded-lg">
                     <div>
                       <p className="font-bold text-gray-800">Titanium Dioxide</p>
                       <p className="text-yellow-600 text-sm font-medium">Medium</p>
@@ -76,7 +75,7 @@ const Hero = () => {
                     </div>
                   </div>
                   
-                  <div className="p-4 border border-orange-100 bg-orange-50 rounded-lg">
+                  <div className="p-4 border border-gray-800 bg-white rounded-lg">
                     <div>
                       <p className="font-bold text-gray-800">BHT</p>
                       <p className="text-orange-600 text-sm font-medium">Caution</p>
@@ -87,18 +86,18 @@ const Hero = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row sm:justify-start gap-4">
-                <Button className="shadow-none bg-transparent text-azure-500 border border-azure-200 hover:bg-azure-50">View Safe Alternatives</Button>
-                <Button className="shadow-none bg-transparent text-azure-500 border border-azure-200 hover:bg-azure-50">Full Health Report</Button>
+                <Button className="bg-transparent text-gray-800 border border-gray-800 hover:bg-gray-50">View Safe Alternatives</Button>
+                <Button className="bg-transparent text-gray-800 border border-gray-800 hover:bg-gray-50">Full Health Report</Button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Cleaner wave separator */}
+      {/* Cleaner wave separator - removing curved elements */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto text-white">
-          <path fill="currentColor" fillOpacity="1" d="M0,128L48,149.3C96,171,192,213,288,208C384,203,480,149,576,144C672,139,768,181,864,197.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="w-full h-auto text-white">
+          <path fill="currentColor" fillOpacity="1" d="M0,0 L1440,0 L1440,100 L0,100 Z"></path>
         </svg>
       </div>
     </section>
