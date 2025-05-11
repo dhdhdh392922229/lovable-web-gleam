@@ -46,14 +46,14 @@ const Hero = () => {
             <div className="p-6 md:p-8">
               <div className="flex justify-between items-center mb-6">
                 <div className="flex items-center">
-                  <div className="h-10 w-10 bg-gray-100 flex items-center justify-center rounded-full mr-3">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-full">
                     <img 
                       src="/lovable-uploads/239c243a-8627-416b-ac27-45607806694d.png" 
                       alt="Sunerus Icon" 
-                      className="w-6 h-6 object-contain" 
+                      className="w-8 h-8 object-contain" 
                     />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800">Ingredient Analysis</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 ml-3">Ingredient Analysis</h3>
                 </div>
                 <span className="text-sm text-azure-400 font-medium">Scanning Complete</span>
               </div>
@@ -87,8 +87,8 @@ const Hero = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row sm:justify-start gap-4">
-                <Button className="bg-azure-400 hover:bg-azure-500 text-white">View Safe Alternatives</Button>
-                <Button variant="outline" className="text-azure-500 border-azure-200">Full Health Report</Button>
+                <Button className="shadow-none bg-transparent text-azure-500 border border-azure-200 hover:bg-azure-50">View Safe Alternatives</Button>
+                <Button className="shadow-none bg-transparent text-azure-500 border border-azure-200 hover:bg-azure-50">Full Health Report</Button>
               </div>
             </div>
           </div>

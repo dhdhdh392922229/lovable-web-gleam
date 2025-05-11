@@ -29,7 +29,7 @@ const Contact = () => {
       <div className="container relative mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get In <span className="text-gradient">Touch</span>
+            Get In <span className="text-azure-400">Touch</span>
           </h2>
           <p className="text-azure-600/80">
             Have questions about ingredients or need assistance with our app? Our team is here to help.
@@ -122,7 +122,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-azure-500 to-opal-500 hover:opacity-90">
+                <Button className="w-full bg-azure-400 hover:bg-azure-500 text-white">
                   Send Message
                 </Button>
               </form>

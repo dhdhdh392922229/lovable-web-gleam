@@ -26,16 +26,16 @@ const Footer = () => {
               {/* Social media icons */}
               <a 
                 href="#" 
-                className="w-8 h-8 rounded-full bg-azure-50 flex items-center justify-center hover:bg-azure-100 transition-colors"
+                className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
               >
-                <Instagram className="w-4 h-4 text-azure-400" />
+                <Instagram className="w-4 h-4 text-gray-600" />
                 <span className="sr-only">Instagram</span>
               </a>
               <a 
                 href="#" 
-                className="w-8 h-8 rounded-full bg-azure-50 flex items-center justify-center hover:bg-azure-100 transition-colors"
+                className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
               >
-                <Linkedin className="w-4 h-4 text-azure-400" />
+                <Linkedin className="w-4 h-4 text-gray-600" />
                 <span className="sr-only">LinkedIn</span>
               </a>
             </div>
