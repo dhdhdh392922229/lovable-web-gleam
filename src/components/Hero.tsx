@@ -18,19 +18,19 @@ const Hero = () => {
 
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
-      {/* Backdrop design exactly matching cluely.com with the user's images */}
+      {/* New backdrop with the uploaded images */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1b2c4a] to-[#0a1635]">
           <div className="absolute inset-0 opacity-50" 
             style={{
-              backgroundImage: "url('/lovable-uploads/982d5b37-ee21-4774-aa74-56ba77df0003.png')",
+              backgroundImage: "url('/lovable-uploads/8bec9e09-ca8a-4b6d-9b05-4ef9169faff2.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               mixBlendMode: "soft-light",
             }}>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.2)_0%,_rgba(13,40,95,0.4)_100%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.3)_0%,_rgba(13,40,95,0.5)_100%)]"></div>
         
         {/* Add subtle dot pattern overlay like cluely.com */}
         <div className="absolute inset-0 opacity-10" 
@@ -43,19 +43,22 @@ const Hero = () => {
 
       <div className="container relative mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-5 tracking-tight">
-            <span className="text-white block mb-2">Sunerus Helps You</span>
-            <span className="text-white/90 block h-[60px] md:h-[72px] flex items-center justify-center transition-opacity duration-300">
-              {changingTexts[textIndex]}
-            </span>
-          </h1>
+          {/* Positioned lower as requested */}
+          <div className="pt-16 md:pt-24">
+            <h1 className="text-5xl md:text-6xl font-bold mb-5 tracking-tight">
+              <span className="text-white block mb-2">Sunerus Helps You</span>
+              <span className="text-white/90 block h-[60px] md:h-[72px] flex items-center justify-center transition-opacity duration-300">
+                {changingTexts[textIndex]}
+              </span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed mt-6">
+              Scan products and instantly identify harmful or allergy-triggering ingredients, 
+              with safer alternatives for food, makeup, skincare, and more.
+            </p>
+          </div>
           
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Scan products and instantly identify harmful or allergy-triggering ingredients, 
-            with safer alternatives for food, makeup, skincare, and more.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20 mt-8">
             <Button 
               size="lg" 
               className="bg-[#0ea5e9] text-white hover:bg-[#0284c7] font-medium px-10 py-6 h-14 rounded-full shadow-lg"
@@ -81,8 +84,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Product Card - Exactly matching cluely.com style */}
-        <div className="mt-4 relative max-w-4xl mx-auto">
+        {/* Product Card with adjusted positioning */}
+        <div className="mt-8 relative max-w-4xl mx-auto">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-md border border-white/20">
             {/* Glowing effect behind card */}
             <div className="absolute -inset-1 bg-blue-500/20 blur-xl rounded-2xl"></div>
@@ -114,7 +117,7 @@ const Hero = () => {
 
               <p className="text-center text-white/80 mb-4 text-sm font-medium">Detected Ingredients:</p>
               
-              {/* Ingredient Cards - Layout matching cluely.com */}
+              {/* Ingredient Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="p-4 border border-white/20 bg-white/5 rounded-lg backdrop-blur-sm">
                   <div className="flex items-center mb-2">
@@ -144,7 +147,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              {/* Action Buttons - Matching cluely.com style */}
+              {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row sm:justify-center gap-3">
                 <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full shadow-md text-sm px-6">
                   View Safe Alternatives
