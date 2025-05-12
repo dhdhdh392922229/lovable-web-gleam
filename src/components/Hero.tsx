@@ -1,12 +1,24 @@
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Apple, Smartphone } from "lucide-react";
 
 const Hero = () => {
+  const [textIndex, setTextIndex] = useState(0);
+  const changingTexts = ["Make Better Choices", "Find Safer Products", "Identify Ingredients"];
+  
+  // Effect for text animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => (prevIndex + 1) % changingTexts.length);
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
-      {/* Blue backdrop overlay with radial gradient inspired by the uploaded images */}
+      {/* Backdrop design inspired by cluely.com */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-indigo-900">
           <div className="absolute inset-0 opacity-70" 
@@ -25,7 +37,9 @@ const Hero = () => {
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
             <span className="text-white block">Sunerus Helps You</span>
-            <span className="text-white/90 block">Make Better Choices</span>
+            <span className="text-white/90 block h-[60px] md:h-[72px] flex items-center justify-center transition-opacity duration-300">
+              {changingTexts[textIndex]}
+            </span>
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto">
@@ -59,7 +73,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Product Card */}
+        {/* Product Card - Updated to match cluely.com style */}
         <div className="mt-16 relative max-w-5xl mx-auto">
           <div className="relative rounded-2xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-md border border-white/20">
             <div className="p-6 md:p-8">
