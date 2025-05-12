@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Apple, Android } from "lucide-react";
+import { Apple, Smartphone } from "lucide-react";
 
 const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
@@ -57,7 +57,7 @@ const Hero = () => {
               size="lg" 
               className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 font-medium px-8 h-14 rounded-full flex items-center gap-2"
             >
-              <Android size={20} />
+              <Smartphone size={20} />
               Download on Android
             </Button>
           </div>
