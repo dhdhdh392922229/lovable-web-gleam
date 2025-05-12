@@ -18,10 +18,10 @@ const Hero = () => {
 
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
-      {/* Backdrop design inspired by cluely.com */}
+      {/* Backdrop design exactly matching cluely.com with the user's images */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-indigo-900">
-          <div className="absolute inset-0 opacity-70" 
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1b2c4a] to-[#0a1635]">
+          <div className="absolute inset-0 opacity-50" 
             style={{
               backgroundImage: "url('/lovable-uploads/982d5b37-ee21-4774-aa74-56ba77df0003.png')",
               backgroundSize: "cover",
@@ -30,27 +30,35 @@ const Hero = () => {
             }}>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.3)_0%,_rgba(13,40,95,0.5)_100%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.2)_0%,_rgba(13,40,95,0.4)_100%)]"></div>
+        
+        {/* Add subtle dot pattern overlay like cluely.com */}
+        <div className="absolute inset-0 opacity-10" 
+          style={{
+            backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px)",
+            backgroundSize: "16px 16px"
+          }}>
+        </div>
       </div>
 
       <div className="container relative mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            <span className="text-white block">Sunerus Helps You</span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-5 tracking-tight">
+            <span className="text-white block mb-2">Sunerus Helps You</span>
             <span className="text-white/90 block h-[60px] md:h-[72px] flex items-center justify-center transition-opacity duration-300">
               {changingTexts[textIndex]}
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
             Scan products and instantly identify harmful or allergy-triggering ingredients, 
             with safer alternatives for food, makeup, skincare, and more.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
             <Button 
               size="lg" 
-              className="bg-white text-blue-900 hover:bg-white/90 font-medium px-8 h-14 rounded-full shadow-lg"
+              className="bg-[#0ea5e9] text-white hover:bg-[#0284c7] font-medium px-10 py-6 h-14 rounded-full shadow-lg"
             >
               Scan Now
             </Button>
@@ -59,7 +67,7 @@ const Hero = () => {
               size="lg" 
               className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 font-medium px-8 h-14 rounded-full flex items-center gap-2 shadow-lg"
             >
-              <Apple size={20} />
+              <Apple size={18} />
               Download on iOS
             </Button>
             
@@ -67,16 +75,19 @@ const Hero = () => {
               size="lg" 
               className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 font-medium px-8 h-14 rounded-full flex items-center gap-2 shadow-lg"
             >
-              <Smartphone size={20} />
+              <Smartphone size={18} />
               Download on Android
             </Button>
           </div>
         </div>
 
-        {/* Product Card - Updated to match cluely.com style */}
-        <div className="mt-16 relative max-w-5xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-md border border-white/20">
-            <div className="p-6 md:p-8">
+        {/* Product Card - Exactly matching cluely.com style */}
+        <div className="mt-4 relative max-w-4xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-md border border-white/20">
+            {/* Glowing effect behind card */}
+            <div className="absolute -inset-1 bg-blue-500/20 blur-xl rounded-2xl"></div>
+            
+            <div className="relative p-6 md:p-8">
               {/* Analysis Header */}
               <div className="flex justify-between items-center mb-6">
                 <div className="flex items-center">
@@ -89,10 +100,10 @@ const Hero = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white ml-3">Product Scan</h3>
                 </div>
-                <span className="text-sm text-white/80 font-medium">Scanning Complete</span>
+                <span className="px-4 py-1 text-xs text-white/80 font-medium bg-white/10 rounded-full border border-white/20">Scanning Complete</span>
               </div>
               
-              {/* Product Image - Updated to something else */}
+              {/* Product Image */}
               <div className="bg-black/30 rounded-lg mb-6 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1000&auto=format&fit=crop"
@@ -101,35 +112,44 @@ const Hero = () => {
                 />
               </div>
 
-              <p className="text-center text-white/80 mb-4">Detected Ingredients:</p>
+              <p className="text-center text-white/80 mb-4 text-sm font-medium">Detected Ingredients:</p>
               
-              {/* Ingredient Cards */}
+              {/* Ingredient Cards - Layout matching cluely.com */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="p-4 border border-white/20 bg-white/5 rounded-lg backdrop-blur-sm">
-                  <p className="font-bold text-white">Red 40</p>
-                  <p className="text-sm text-white/60">High Risk</p>
-                  <p className="text-sm text-white/80 mt-1">Synthetic color linked to allergies</p>
+                  <div className="flex items-center mb-2">
+                    <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                    <p className="font-bold text-white">Red 40</p>
+                  </div>
+                  <p className="text-xs text-red-300 mb-1">High Risk</p>
+                  <p className="text-sm text-white/80">Synthetic color linked to allergies</p>
                 </div>
                 
                 <div className="p-4 border border-white/20 bg-white/5 rounded-lg backdrop-blur-sm">
-                  <p className="font-bold text-white">Titanium Dioxide</p>
-                  <p className="text-sm text-white/60">Medium</p>
-                  <p className="text-sm text-white/80 mt-1">Possible carcinogen</p>
+                  <div className="flex items-center mb-2">
+                    <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                    <p className="font-bold text-white">Titanium Dioxide</p>
+                  </div>
+                  <p className="text-xs text-yellow-300 mb-1">Medium Risk</p>
+                  <p className="text-sm text-white/80">Possible carcinogen</p>
                 </div>
                 
                 <div className="p-4 border border-white/20 bg-white/5 rounded-lg backdrop-blur-sm">
-                  <p className="font-bold text-white">BHT</p>
-                  <p className="text-sm text-white/60">Caution</p>
-                  <p className="text-sm text-white/80 mt-1">Preservative with health concerns</p>
+                  <div className="flex items-center mb-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                    <p className="font-bold text-white">BHT</p>
+                  </div>
+                  <p className="text-xs text-orange-300 mb-1">Caution</p>
+                  <p className="text-sm text-white/80">Preservative with health concerns</p>
                 </div>
               </div>
               
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row sm:justify-center gap-4">
-                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full shadow-md">
+              {/* Action Buttons - Matching cluely.com style */}
+              <div className="flex flex-col sm:flex-row sm:justify-center gap-3">
+                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full shadow-md text-sm px-6">
                   View Safe Alternatives
                 </Button>
-                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full shadow-md">
+                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full shadow-md text-sm px-6">
                   Full Health Report
                 </Button>
               </div>
