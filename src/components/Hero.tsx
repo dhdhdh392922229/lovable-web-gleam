@@ -1,27 +1,23 @@
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Apple, Smartphone } from "lucide-react";
 
 const Hero = () => {
-  const [textIndex, setTextIndex] = useState(0);
-  const changingTexts = [
-    "Scan for Hidden Ingredients",
-    "Discover Safer Alternatives",
-    "Make Healthier Choices"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTextIndex((prevIndex) => (prevIndex + 1) % changingTexts.length);
-    }, 3000);
-    
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-br from-azure-900 via-azure-800 to-azure-900 text-white">
+    <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+      {/* Blue backdrop overlay with radial gradient inspired by the uploaded images */}
       <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-indigo-900">
+          <div className="absolute inset-0 opacity-70" 
+            style={{
+              backgroundImage: "url('/lovable-uploads/982d5b37-ee21-4774-aa74-56ba77df0003.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              mixBlendMode: "soft-light",
+            }}>
+          </div>
+        </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.3)_0%,_rgba(13,40,95,0.5)_100%)]"></div>
       </div>
 
@@ -29,7 +25,7 @@ const Hero = () => {
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
             <span className="text-white block">Sunerus Helps You</span>
-            <span className="text-white/90 block">{changingTexts[textIndex]}</span>
+            <span className="text-white/90 block">Make Better Choices</span>
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto">
@@ -40,14 +36,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-azure-900 hover:bg-white/90 font-medium px-8 h-14 rounded-full"
+              className="bg-white text-blue-900 hover:bg-white/90 font-medium px-8 h-14 rounded-full shadow-lg"
             >
               Scan Now
             </Button>
             
             <Button 
               size="lg" 
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 font-medium px-8 h-14 rounded-full flex items-center gap-2"
+              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 font-medium px-8 h-14 rounded-full flex items-center gap-2 shadow-lg"
             >
               <Apple size={20} />
               Download on iOS
@@ -55,7 +51,7 @@ const Hero = () => {
             
             <Button 
               size="lg" 
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 font-medium px-8 h-14 rounded-full flex items-center gap-2"
+              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 font-medium px-8 h-14 rounded-full flex items-center gap-2 shadow-lg"
             >
               <Smartphone size={20} />
               Download on Android
@@ -63,9 +59,9 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Ingredient Analysis Card */}
+        {/* Product Card */}
         <div className="mt-16 relative max-w-5xl mx-auto">
-          <div className="relative rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur-md border border-white/20">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-md border border-white/20">
             <div className="p-6 md:p-8">
               {/* Analysis Header */}
               <div className="flex justify-between items-center mb-6">
@@ -77,15 +73,15 @@ const Hero = () => {
                       <path d="M8 12H16" stroke="#FFFFFF" strokeWidth="2"/>
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white ml-3">Ingredient Analysis</h3>
+                  <h3 className="text-xl font-semibold text-white ml-3">Product Scan</h3>
                 </div>
                 <span className="text-sm text-white/80 font-medium">Scanning Complete</span>
               </div>
               
-              {/* Product Image */}
+              {/* Product Image - Updated to something else */}
               <div className="bg-black/30 rounded-lg mb-6 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1617421753170-46511a8d73fc?q=80&w=1000&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1000&auto=format&fit=crop"
                   alt="Product scan" 
                   className="w-full h-48 object-cover opacity-90"
                 />
@@ -116,10 +112,10 @@ const Hero = () => {
               
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row sm:justify-center gap-4">
-                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full">
+                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full shadow-md">
                   View Safe Alternatives
                 </Button>
-                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full">
+                <Button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border border-white/20 rounded-full shadow-md">
                   Full Health Report
                 </Button>
               </div>
