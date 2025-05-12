@@ -24,7 +24,7 @@ const NavBar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-sm" 
+          ? "bg-white/10 backdrop-blur-md shadow-sm border-b border-white/10" 
           : "bg-transparent"
       }`}
     >
@@ -34,24 +34,25 @@ const NavBar = () => {
             <img 
               src="/lovable-uploads/239c243a-8627-416b-ac27-45607806694d.png" 
               alt="Sunerus Logo" 
-              className="w-8 h-8 object-contain"
+              className="w-8 h-8 object-contain brightness-200"
             />
           </div>
-          <span className="ml-3 text-xl font-bold text-gray-800">Sunerus</span>
+          <span className="ml-3 text-xl font-bold text-white">Sunerus</span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-gray-600 hover:text-azure-500 transition-colors">Features</a>
-          <a href="#contact" className="text-gray-600 hover:text-azure-500 transition-colors">Contact</a>
-          <Button className="bg-azure-400 hover:bg-azure-500 text-white transition-colors">
+          <a href="#features" className="text-white/80 hover:text-white transition-colors">Features</a>
+          <a href="#pricing" className="text-white/80 hover:text-white transition-colors">Pricing</a>
+          <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+          <Button className="bg-white text-azure-900 hover:bg-white/90 rounded-full">
             Get Started
           </Button>
         </nav>
 
         {/* Mobile Navigation Trigger */}
         <button 
-          className="md:hidden p-2 text-gray-600" 
+          className="md:hidden p-2 text-white" 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -61,23 +62,30 @@ const NavBar = () => {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-white/10 backdrop-blur-md border-t border-white/10">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a 
               href="#features" 
-              className="text-gray-600 hover:text-azure-500 py-2 transition-colors"
+              className="text-white/80 hover:text-white py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Features
             </a>
             <a 
+              href="#pricing" 
+              className="text-white/80 hover:text-white py-2 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Pricing
+            </a>
+            <a 
               href="#contact" 
-              className="text-gray-600 hover:text-azure-500 py-2 transition-colors"
+              className="text-white/80 hover:text-white py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
-            <Button className="bg-azure-400 hover:bg-azure-500 w-full text-white">
+            <Button className="bg-white text-azure-900 hover:bg-white/90 w-full rounded-full">
               Get Started
             </Button>
           </div>
